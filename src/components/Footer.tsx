@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Facebook, ArrowUpRight } from 'lucide-react';
 import { companyInfo, services } from '@/data/content';
 
 const navLinks = [
@@ -28,16 +28,13 @@ export default function Footer() {
               structures custom-engineered and installed across South Africa.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Social media placeholder"
-                  className="flex h-10 w-10 items-center justify-center border border-charcoal-700 text-white/60 transition-colors hover:border-gold-500 hover:text-gold-500"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center border border-charcoal-700 text-white/60 transition-colors hover:border-gold-500 hover:text-gold-500"
+              >
+                <Facebook size={18} />
+              </a>
             </div>
           </div>
 
@@ -92,7 +89,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Phone size={16} className="mt-0.5 shrink-0 text-gold-500" />
-                <span>{companyInfo.phone}</span>
+                <span>0670777845</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Mail size={16} className="mt-0.5 shrink-0 text-gold-500" />
@@ -100,7 +97,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-gold-500" />
-                <span>{companyInfo.location}</span>
+                <span>7 Elsburg Road, Delville, Germiston</span>
               </li>
             </ul>
             <a
