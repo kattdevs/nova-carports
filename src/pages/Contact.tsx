@@ -58,7 +58,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wider text-white/40">Phone</p>
-                        <p className="mt-1 text-sm text-white">{companyInfo.phone}</p>
+                        <p className="mt-1 text-sm text-white">0670777845</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -76,13 +76,16 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wider text-white/40">Location</p>
-                        <p className="mt-1 text-sm text-white">{companyInfo.location}</p>
+                        <p className="mt-1 text-sm text-white">7 Elsburg Road, Delville, Germiston</p>
                       </div>
                     </li>
                   </ul>
 
                   <a
-                    href="#"
+
+                    href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-8 flex items-center justify-center gap-2 bg-gold-500 px-6 py-4 text-sm font-medium uppercase tracking-wide text-charcoal-900 transition-colors hover:bg-gold-400"
                   >
                     <MessageCircle size={18} />

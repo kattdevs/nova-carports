@@ -59,6 +59,18 @@ export default function ContactForm() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (validate()) {
+      const message = `Hi, I'd like to request a free quote.
+
+*Name:* ${form.fullName}
+*Contact Number:* ${form.contactNumber}
+*Email:* ${form.email}
+*Service:* ${form.service}
+*Location:* ${form.location}
+*Details:* ${form.details}`;
+
+      const whatsappUrl = `https://wa.me/27670777845?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
       setSubmitted(true);
     }
   };
@@ -101,9 +113,8 @@ export default function ContactForm() {
             type="text"
             value={form.fullName}
             onChange={(e) => handleChange('fullName', e.target.value)}
-            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.fullName ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.fullName ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           />
           {errors.fullName && <p className="mt-1.5 text-xs text-red-500">{errors.fullName}</p>}
         </div>
@@ -117,9 +128,8 @@ export default function ContactForm() {
             type="tel"
             value={form.contactNumber}
             onChange={(e) => handleChange('contactNumber', e.target.value)}
-            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.contactNumber ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.contactNumber ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           />
           {errors.contactNumber && <p className="mt-1.5 text-xs text-red-500">{errors.contactNumber}</p>}
         </div>
@@ -133,9 +143,8 @@ export default function ContactForm() {
             type="email"
             value={form.email}
             onChange={(e) => handleChange('email', e.target.value)}
-            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.email ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.email ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           />
           {errors.email && <p className="mt-1.5 text-xs text-red-500">{errors.email}</p>}
         </div>
@@ -148,9 +157,8 @@ export default function ContactForm() {
             id="service"
             value={form.service}
             onChange={(e) => handleChange('service', e.target.value)}
-            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.service ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.service ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           >
             <option value="">Select a service</option>
             {serviceOptions.map((opt) => (
@@ -169,9 +177,8 @@ export default function ContactForm() {
             type="text"
             value={form.location}
             onChange={(e) => handleChange('location', e.target.value)}
-            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.location ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.location ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           />
           {errors.location && <p className="mt-1.5 text-xs text-red-500">{errors.location}</p>}
         </div>
@@ -185,9 +192,8 @@ export default function ContactForm() {
             rows={5}
             value={form.details}
             onChange={(e) => handleChange('details', e.target.value)}
-            className={`mt-2 w-full resize-none border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${
-              errors.details ? 'border-red-400' : 'border-charcoal-200'
-            }`}
+            className={`mt-2 w-full resize-none border bg-charcoal-50 px-4 py-3 text-sm text-charcoal-900 outline-none transition-colors focus:bg-white focus:border-gold-500 ${errors.details ? 'border-red-400' : 'border-charcoal-200'
+              }`}
           />
           {errors.details && <p className="mt-1.5 text-xs text-red-500">{errors.details}</p>}
         </div>
@@ -202,7 +208,10 @@ export default function ContactForm() {
       </button>
 
       <a
-        href="#"
+
+        href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-4 flex w-full items-center justify-center gap-2 border border-charcoal-300 px-9 py-4 text-sm font-medium uppercase tracking-wide text-charcoal-800 transition-all duration-300 hover:border-green-600 hover:bg-green-50 hover:text-green-700"
       >
         <MessageCircle size={16} />
