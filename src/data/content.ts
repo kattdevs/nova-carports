@@ -335,8 +335,8 @@ export const processSteps = [
 export const companyInfo = {
   name: 'Nova Carports',
   tagline: 'Structural Carports & Engineering Solutions',
-  phone: '[PHONE NUMBER]',
-  whatsapp: '[WHATSAPP NUMBER]',
+  phone: '0670777845',
+  whatsapp: '27670777845',
   email: '[BUSINESS EMAIL]',
-  location: 'South Africa',
+  location: '7 Elsburg Road, Delville, Germiston',
 };
