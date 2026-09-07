@@ -13,18 +13,24 @@ type GalleryImage = {
 };
 
 const galleryImages: GalleryImage[] = [
-  { id: 'g1', src: '/image.png', alt: 'Nova Carports company logo', caption: 'Nova Carports Brand Identity', category: 'Brand' },
-  { id: 'g2', src: 'https://images.pexels.com/photos/31197870/pexels-photo-31197870.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Modern steel framework carport structure under clear sky', caption: 'Steel Cantilever Carport Frame', category: 'Carports' },
-  { id: 'g3', src: 'https://images.pexels.com/photos/9799764/pexels-photo-9799764.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Parking lot with solar panel canopy structures', caption: 'Solar Carport Installation', category: 'Solar Carports' },
-  { id: 'g4', src: 'https://images.pexels.com/photos/5511454/pexels-photo-5511454.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Shade sail canopy structures under blue sky', caption: 'Architectural Shade Sails', category: 'Shade Netting' },
-  { id: 'g5', src: 'https://images.pexels.com/photos/32574417/pexels-photo-32574417.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Security gate with intercom system at driveway entrance', caption: 'Automated Security Gate', category: 'Gates & Security' },
-  { id: 'g6', src: 'https://images.pexels.com/photos/17366769/pexels-photo-17366769.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Close-up of interlocking grey brick pavement', caption: 'Interlocking Brick Paving', category: 'Paving & Tar' },
-  { id: 'g7', src: 'https://images.pexels.com/photos/9799727/pexels-photo-9799727.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Aerial view of parking lot with solar panel canopies', caption: 'Commercial Solar Array', category: 'Solar Carports' },
-  { id: 'g8', src: 'https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Contemporary luxury home with spacious paved driveway', caption: 'Residential Carport & Driveway', category: 'Carports' },
-  { id: 'g9', src: 'https://images.pexels.com/photos/19893266/pexels-photo-19893266.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Modern parking structure with curved canopy under blue sky', caption: 'Commercial Parking Canopy', category: 'Shade Netting' },
-  { id: 'g10', src: 'https://images.pexels.com/photos/34272103/pexels-photo-34272103.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Asphalt truck paving a street on a sunny day', caption: 'Hot-Mix Asphalt Surfacing', category: 'Paving & Tar' },
-  { id: 'g11', src: 'https://images.pexels.com/photos/14539151/pexels-photo-14539151.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Construction worker welding steel beam on site', caption: 'On-Site Steel Fabrication', category: 'Maintenance' },
-  { id: 'g12', src: 'https://images.pexels.com/photos/16580841/pexels-photo-16580841.png?auto=compress&cs=tinysrgb&w=1200', alt: 'Security gate at a residential driveway entrance', caption: 'Residential Estate Gate', category: 'Gates & Security' },
+  { id: 'g13', src: '/gallery/project-1.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g14', src: '/gallery/project-2.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g15', src: '/gallery/project-3.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g16', src: '/gallery/project-4.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g17', src: '/gallery/project-5.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g18', src: '/gallery/project-6.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g19', src: '/gallery/project-7.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g20', src: '/gallery/project-8.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g21', src: '/gallery/project-9.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g22', src: '/gallery/project-10.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g23', src: '/gallery/project-11.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g24', src: '/gallery/project-12.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g25', src: '/gallery/project-13.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g26', src: '/gallery/project-14.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g27', src: '/gallery/project-15.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g28', src: '/gallery/project-16.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g29', src: '/gallery/project-17.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
+  { id: 'g30', src: '/gallery/project-18.jepg', alt: '[describe the photo]', caption: '[short project name]', category: '[pick from categories list]' },
 ];
 
 const categories = ['All', 'Carports', 'Solar Carports', 'Shade Netting', 'Gates & Security', 'Paving & Tar', 'Maintenance'];
@@ -69,11 +75,10 @@ export default function Gallery() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-5 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-300 ${
-                    filter === cat
-                      ? 'bg-charcoal-900 text-white'
-                      : 'border border-charcoal-300 bg-white text-charcoal-700 hover:border-charcoal-900 hover:bg-charcoal-900 hover:text-white'
-                  }`}
+                  className={`px-5 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-300 ${filter === cat
+                    ? 'bg-charcoal-900 text-white'
+                    : 'border border-charcoal-300 bg-white text-charcoal-700 hover:border-charcoal-900 hover:bg-charcoal-900 hover:text-white'
+                    }`}
                 >
                   {cat}
                 </button>
