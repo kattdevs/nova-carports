@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 type PageHeroProps = {
@@ -21,11 +20,6 @@ export default function PageHero({ title, subtitle, image, imageAlt }: PageHeroP
 
       <div className="relative flex h-full items-end">
         <div className="container-px pb-14">
-          <nav className="mb-4 flex items-center gap-2 text-xs uppercase tracking-widest text-white/50">
-            <Link to="/" className="transition-colors hover:text-gold-500">Home</Link>
-            <span>/</span>
-            <span className="text-gold-500">{title}</span>
-          </nav>
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl text-balance">
             {title}
           </h1>

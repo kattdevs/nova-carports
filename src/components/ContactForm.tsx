@@ -85,8 +85,7 @@ export default function ContactForm() {
           Thank You for Your Enquiry
         </h3>
         <p className="mt-3 max-w-md text-sm text-charcoal-500">
-          Your request has been received. Our team will contact you within [response time] to
-          discuss your project requirements.
+          Your request has been received. Our team will be in touch shortly to discuss your project requirements.
         </p>
         <button
           onClick={() => {

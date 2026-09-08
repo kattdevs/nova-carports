@@ -30,7 +30,6 @@ export default function Services() {
 
           <div className="mt-14 flex flex-col gap-16 lg:gap-24">
             {services.map((service, i) => {
-              const Icon = service.icon;
               const reversed = i % 2 === 1;
               return (
                 <Reveal key={service.id}>
@@ -43,9 +42,6 @@ export default function Services() {
                           loading="lazy"
                           className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                         />
-                      </div>
-                      <div className="absolute left-0 top-0 flex h-16 w-16 items-center justify-center bg-charcoal-900/90 backdrop-blur-sm">
-                        <Icon size={28} className="text-gold-500" />
                       </div>
                     </div>
 
@@ -105,7 +101,6 @@ export default function Services() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {pavingServices.map((service, i) => {
-              const Icon = service.icon;
               return (
                 <Reveal key={service.id} delay={i * 80}>
                   <div className="group flex flex-col overflow-hidden bg-charcoal-800 border border-charcoal-700 transition-colors hover:border-gold-500/40">
@@ -116,9 +111,6 @@ export default function Services() {
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center bg-charcoal-900/90 backdrop-blur-sm">
-                        <Icon size={24} className="text-gold-500" />
-                      </div>
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <h3 className="font-display text-lg font-semibold text-white">

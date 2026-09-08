@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 import Reveal from '@/components/Reveal';
 import ServiceCard from '@/components/ServiceCard';
 import CTASection from '@/components/CTASection';
-import { services, projects } from '@/data/content';
+import { services } from '@/data/content';
 
 const trustItems = [
   {
@@ -47,8 +47,6 @@ const approachItems = [
 ];
 
 export default function Home() {
-  const featuredProjects = projects.slice(0, 4);
-
   return (
     <>
       {/* HERO */}
@@ -64,12 +62,7 @@ export default function Home() {
         <div className="relative flex h-full items-center">
           <div className="container-px">
             <Reveal>
-              <span className="inline-block border border-gold-500/40 bg-charcoal-900/40 px-4 py-2 text-xs font-medium uppercase tracking-widest text-gold-500 backdrop-blur-sm">
-                Structural Carports &middot; Solar Canopies &middot; Shade Engineering
-              </span>
-            </Reveal>
-            <Reveal delay={100}>
-              <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl text-balance">
+              <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl text-balance">
                 Engineering Robust Protection for Your Fleet and Property
               </h1>
             </Reveal>
@@ -225,55 +218,6 @@ export default function Home() {
                 </span>
               </Link>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURED PROJECTS */}
-      <section className="bg-charcoal-50">
-        <div className="container-px section-py">
-          <Reveal>
-            <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-gold-600">
-                  Selected Work
-                </span>
-                <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-charcoal-900 sm:text-4xl lg:text-5xl text-balance">
-                  Featured Projects
-                </h2>
-              </div>
-              <Button to="/projects" variant="ghost" size="md">
-                View Full Portfolio
-                <ArrowRight size={16} />
-              </Button>
-            </div>
-          </Reveal>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {featuredProjects.map((project, i) => (
-              <Reveal key={project.id} delay={i * 80}>
-                <Link to="/projects" className="group block overflow-hidden bg-charcoal-900">
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/20 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 p-5">
-                      <span className="text-xs font-medium uppercase tracking-widest text-gold-500">
-                        {project.category}
-                      </span>
-                      <h3 className="mt-2 font-display text-base font-semibold leading-snug text-white">
-                        {project.title}
-                      </h3>
-                      <p className="mt-1 text-xs text-white/50">{project.location}</p>
-                    </div>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>

@@ -7,7 +7,6 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Products & Services', path: '/services' },
   { label: 'About Us', path: '/about' },
-  { label: 'Projects', path: '/projects' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -44,33 +43,31 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex items-center gap-8">
-          <ul className="hidden items-center gap-8 lg:flex">
-            {navLinks.map((link) => {
-              const active = location.pathname === link.path;
-              return (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className={`relative text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${active ? 'text-gold-500' : 'text-white/80 hover:text-white'
+        <ul className="hidden items-center gap-8 lg:flex">
+          {navLinks.map((link) => {
+            const active = location.pathname === link.path;
+            return (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`relative text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${active ? 'text-gold-500' : 'text-white/80 hover:text-white'
+                    }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1.5 left-0 h-px bg-gold-500 transition-all duration-300 ${active ? 'w-full' : 'w-0'
                       }`}
-                  >
-                    {link.label}
-                    <span
-                      className={`absolute -bottom-1.5 left-0 h-px bg-gold-500 transition-all duration-300 ${active ? 'w-full' : 'w-0'
-                        }`}
-                    />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+                  />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
-          <div className="hidden lg:block lg:-mr-4 xl:-mr-8">
-            <Button href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20quote" size="sm">
-              Request a Free Quote
-            </Button>
-          </div>
+        <div className="hidden lg:block">
+          <Button href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20quote" size="sm">
+            Request a Free Quote
+          </Button>
         </div>
 
         <button

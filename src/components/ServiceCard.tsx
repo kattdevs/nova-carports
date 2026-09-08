@@ -10,35 +10,39 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const Icon = service.icon;
 
   return (
-    <Link
-      to="/services"
-      className="group relative flex flex-col overflow-hidden bg-white border border-charcoal-200 transition-all duration-500 hover:border-charcoal-400 hover:shadow-xl hover:shadow-charcoal-900/10"
-    >
-      <div className="relative aspect-[4/3] overflow-hidden bg-charcoal-100">
-        <img
-          src={service.image}
-          alt={service.imageAlt}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-charcoal-900/20 transition-opacity duration-500 group-hover:bg-charcoal-900/10" />
-        <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center bg-charcoal-900/90 backdrop-blur-sm">
-          <Icon size={24} className="text-gold-500" />
+    <div className="group flex h-full flex-col justify-between overflow-hidden border border-charcoal-100 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50 hover:shadow-xl hover:shadow-charcoal-900/5">
+      <div>
+        <div className="relative aspect-[16/9] overflow-hidden bg-charcoal-100">
+          <img
+            src={service.image}
+            alt={service.imageAlt}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center bg-charcoal-900/90 text-gold-500 backdrop-blur-sm transition-colors duration-300 group-hover:bg-gold-500 group-hover:text-charcoal-900">
+            <Icon size={20} />
+          </div>
+        </div>
+
+        <div className="p-6">
+          <h3 className="font-display text-xl font-bold text-charcoal-900 transition-colors group-hover:text-gold-600">
+            {service.title}
+          </h3>
+          <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
+            {service.shortDescription}
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-lg font-semibold text-charcoal-900">
-          {service.title}
-        </h3>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal-500">
-          {service.shortDescription}
-        </p>
-        <span className="mt-5 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-charcoal-800 transition-colors group-hover:text-gold-600">
-          Learn More
+      <div className="px-6 pb-6">
+        <Link
+          to="/services"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-charcoal-900 transition-colors hover:text-gold-600"
+        >
+          Explore Service
           <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-        </span>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }

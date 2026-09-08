@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Products & Services', path: '/services' },
   { label: 'About Us', path: '/about' },
-  { label: 'Projects', path: '/projects' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -17,12 +16,9 @@ export default function Footer() {
       <div className="container-px py-16">
         <div className="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <img src="/image.png" alt="Nova Carports" className="h-12 w-auto object-contain" />
-              <span className="font-display text-base font-semibold tracking-wide">
-                Nova Carports
-              </span>
-            </div>
+            <span className="font-display text-base font-semibold tracking-wide">
+              Nova Carports
+            </span>
             <p className="mt-5 text-sm leading-relaxed text-white/60">
               Premium structural carports, solar-ready canopies, and architectural shade
               structures custom-engineered and installed across South Africa.
@@ -101,7 +97,9 @@ export default function Footer() {
               </li>
             </ul>
             <a
-              href="#"
+              href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-gold-500 px-5 py-3 text-sm font-medium uppercase tracking-wide text-charcoal-900 transition-colors hover:bg-gold-400"
             >
               <MessageCircle size={16} />

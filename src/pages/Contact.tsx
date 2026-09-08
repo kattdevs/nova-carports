@@ -82,7 +82,6 @@ export default function Contact() {
                   </ul>
 
                   <a
-
                     href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,29 +95,17 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* MAP PLACEHOLDER */}
+          {/* MAP */}
           <Reveal delay={100}>
             <div className="mt-12">
-              <div className="relative flex h-80 items-center justify-center overflow-hidden bg-charcoal-100 border border-charcoal-200">
-                <div className="absolute inset-0 opacity-30">
-                  <svg className="h-full w-full" viewBox="0 0 400 300" preserveAspectRatio="none">
-                    <defs>
-                      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d6d3d1" strokeWidth="1" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-                  </svg>
-                </div>
-                <div className="relative flex flex-col items-center text-center">
-                  <MapPin size={40} className="text-gold-500" />
-                  <p className="mt-3 font-display text-lg font-semibold text-charcoal-700">
-                    Service Area: South Africa
-                  </p>
-                  <p className="mt-1 text-sm text-charcoal-400">
-                    Map placeholder — serving residential and commercial clients nationwide
-                  </p>
-                </div>
+              <div className="relative h-80 overflow-hidden border border-charcoal-200">
+                <iframe
+                  title="Nova Carports Location"
+                  src="https://www.google.com/maps?q=7+Elsburg+Road,+Delville,+Germiston&output=embed"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </Reveal>
