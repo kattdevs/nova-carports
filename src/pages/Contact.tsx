@@ -67,7 +67,9 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wider text-white/40">Email</p>
-                        <p className="mt-1 text-sm text-white">{companyInfo.email}</p>
+                        <a href={`mailto:${companyInfo.email}`} className="mt-1 block text-sm text-white transition-colors hover:text-gold-500">
+                          {companyInfo.email}
+                        </a>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
