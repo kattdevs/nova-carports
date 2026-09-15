@@ -100,7 +100,7 @@ export default function Navbar() {
             );
           })}
           <li className="pt-3">
-            <Button href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20quote" size="sm">
+            <Button to="/contact" size="sm">
               Request a Free Quote
             </Button>
           </li>
