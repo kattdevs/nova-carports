@@ -73,13 +73,9 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={300}>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-10">
                 <Button to="/contact" size="lg">
                   Request a Free Quote
-                </Button>
-                <Button to="/projects" size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-charcoal-900 hover:border-white">
-                  Explore Our Portfolio
-                  <ArrowRight size={16} />
                 </Button>
               </div>
             </Reveal>
