@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import { MessageCircle, Send, Check } from 'lucide-react';
 
 type FormState = {
@@ -35,6 +36,8 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initial);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   const validate = (): boolean => {
     const next: FormErrors = {};
@@ -56,22 +59,33 @@ export default function ContactForm() {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      const message = `Hi, I'd like to request a free quote.
+    if (!validate()) return;
 
-*Name:* ${form.fullName}
-*Contact Number:* ${form.contactNumber}
-*Email:* ${form.email}
-*Service:* ${form.service}
-*Location:* ${form.location}
-*Details:* ${form.details}`;
+    setSending(true);
+    setSendError(false);
 
-      const whatsappUrl = `https://wa.me/27670777845?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          fullName: form.fullName,
+          contactNumber: form.contactNumber,
+          email: form.email,
+          service: form.service,
+          location: form.location,
+          details: form.details,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       setSubmitted(true);
+    } catch (error) {
+      console.error('EmailJS send failed:', error);
+      setSendError(true);
+    } finally {
+      setSending(false);
     }
   };
 
@@ -198,16 +212,22 @@ export default function ContactForm() {
         </div>
       </div>
 
+      {sendError && (
+        <p className="mt-4 text-sm text-red-500">
+          Something went wrong sending your enquiry. Please try again, or use WhatsApp below.
+        </p>
+      )}
+
       <button
         type="submit"
-        className="mt-8 flex w-full items-center justify-center gap-2 bg-gold-500 px-9 py-4 text-sm font-medium uppercase tracking-wide text-charcoal-900 transition-all duration-300 hover:bg-gold-400"
+        disabled={sending}
+        className="mt-8 flex w-full items-center justify-center gap-2 bg-gold-500 px-9 py-4 text-sm font-medium uppercase tracking-wide text-charcoal-900 transition-all duration-300 hover:bg-gold-400 disabled:opacity-60"
       >
         <Send size={16} />
-        Request a Free Quote
+        {sending ? 'Sending...' : 'Request a Free Quote'}
       </button>
 
       <a
-
         href="https://wa.me/27670777845?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
         target="_blank"
         rel="noopener noreferrer"

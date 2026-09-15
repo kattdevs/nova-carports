@@ -337,6 +337,6 @@ export const companyInfo = {
   tagline: 'Structural Carports & Engineering Solutions',
   phone: '0670777845',
   whatsapp: '27670777845',
-  email: '[BUSINESS EMAIL]',
+  email: 'novacarports@gmail.com',
   location: '7 Elsburg Road, Delville, Germiston',
 };
