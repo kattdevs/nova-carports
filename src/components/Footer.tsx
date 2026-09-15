@@ -39,28 +39,10 @@ export default function Footer() {
               Navigation
             </h3>
             <ul className="mt-5 space-y-3">
-              {navLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-sm text-white/60 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-gold-500">
-              Services
-            </h3>
-            <ul className="mt-5 space-y-3">
               {services.map((service) => (
                 <li key={service.id}>
                   <Link
-                    to="/services"
+                    to={`/services#${service.id}`}
                     className="text-sm text-white/60 transition-colors hover:text-white"
                   >
                     {service.title}
@@ -69,7 +51,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link
-                  to="/services"
+                  to="/services#hot-mix-asphalt"
                   className="text-sm text-white/60 transition-colors hover:text-white"
                 >
                   Paving & Tar Services

@@ -33,7 +33,7 @@ export default function Services() {
               const reversed = i % 2 === 1;
               return (
                 <Reveal key={service.id}>
-                  <div className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${reversed ? 'lg:[direction:rtl]' : ''}`}>
+                  <div id={service.id} className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${reversed ? 'lg:[direction:rtl]' : ''}`}>
                     <div className={`relative overflow-hidden ${reversed ? 'lg:[direction:ltr]' : ''}`}>
                       <div className="aspect-[4/3] overflow-hidden bg-charcoal-100">
                         <img
@@ -103,7 +103,7 @@ export default function Services() {
             {pavingServices.map((service, i) => {
               return (
                 <Reveal key={service.id} delay={i * 80}>
-                  <div className="group flex flex-col overflow-hidden bg-charcoal-800 border border-charcoal-700 transition-colors hover:border-gold-500/40">
+                  <div id={service.id} className="group flex flex-col overflow-hidden bg-charcoal-800 border border-charcoal-700 transition-colors hover:border-gold-500/40">
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img
                         src={service.image}
